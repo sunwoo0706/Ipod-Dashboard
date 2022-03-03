@@ -15,7 +15,12 @@ export function GlobalStyle() {
         }
 
         body {
-          background-color: #f13d22;
+          font-family: EightBitDragon, sans-serif;
+        }
+
+        @font-face {
+          font-family: 'EightBitDragon';
+          src: url('/fonts/EightBitDragon-anqx.ttf') format('truetype');
         }
       `}
     />
