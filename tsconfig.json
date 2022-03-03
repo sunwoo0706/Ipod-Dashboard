@@ -18,7 +18,8 @@
     "types": ["@emotion/react/types/css-prop"],
     "paths": {
       "components/*": ["./components/*"],
-      "shared/*": ["./shared/*"]
+      "shared/*": ["./shared/*"],
+      "assets/*": ["./assets/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
