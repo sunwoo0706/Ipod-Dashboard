@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import pallete from 'shared/Style';
 
 interface headerProps {
   title: string | string[] | undefined;
@@ -10,8 +11,8 @@ const ScreenHeaderWrapper = styled.header`
   text-align: center;
   padding-top: 8px;
   padding-bottom: 5px;
-  border-bottom: 2px solid #252a4a;
-  color: #252a4a;
+  border-bottom: 2px solid ${pallete.scheme.navy};
+  color: ${pallete.scheme.navy};
 `;
 
 export function ScreenHeader({ title }: headerProps) {

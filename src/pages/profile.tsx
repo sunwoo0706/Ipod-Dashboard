@@ -1,5 +1,6 @@
 import { ScreenHeader } from 'components/ScreenHeader';
 import styled from '@emotion/styled';
+import pallete from 'shared/Style';
 
 const ProfileWrapper = styled.div`
   width: 100%;
@@ -10,7 +11,7 @@ const ProfileWrapper = styled.div`
     font-size: 13px;
     padding: 0 10px;
     margin-top: 10px;
-    color: #252a4a;
+    color: ${pallete.scheme.navy};
     h2 {
       & + h2 {
         margin-top: 12px;

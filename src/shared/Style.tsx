@@ -58,3 +58,18 @@ export const BounceInAnimation = keyframes`
     transform: translate3d(0, 0, 0);
   }
 `;
+
+type ColorToken = 'navy' | 'gray';
+
+type ColorTheme = {
+  scheme: Record<ColorToken, string>;
+};
+
+const pallete: Readonly<ColorTheme> = {
+  scheme: {
+    navy: '#252a4a',
+    gray: '#abbbd2',
+  },
+};
+
+export default pallete;

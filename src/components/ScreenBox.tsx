@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import pallete from 'shared/Style';
 
 interface ScreenBoxProps {
   children: React.ReactNode;
@@ -11,7 +12,7 @@ const ScreenBoxWrapper = styled.div`
   top: 58px;
   left: 50%;
   transform: translate(-51.2%, 0);
-  background: #abbbd2;
+  background: ${pallete.scheme.gray};
   z-index: 1;
 `;
 
