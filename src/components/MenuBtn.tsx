@@ -11,6 +11,9 @@ const MenuBtnWrapper = styled.div`
   left: 119px;
   z-index: 1;
   border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export function MenuBtn() {

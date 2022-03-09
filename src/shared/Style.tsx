@@ -18,6 +18,10 @@ export function GlobalStyle() {
           font-family: EightBitDragon, sans-serif;
         }
 
+        a {
+          text-decoration: none;
+        }
+
         @font-face {
           font-family: 'EightBitDragon';
           src: url('/fonts/EightBitDragon-anqx.ttf') format('truetype');
