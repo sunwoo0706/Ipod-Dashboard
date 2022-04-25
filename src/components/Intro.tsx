@@ -11,24 +11,24 @@ const typing = keyframes`
 `;
 
 const fadeOutAnimation = keyframes`
-    0% {
-        opacity: 1;
-    }
-    33% {
-        opacity: 1;
-    }
-    66% {
-        opacity: 1;
-    }
-    99% {
-        display: block;
-        z-index: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-        z-index: -1;
-    }
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
 `;
 
 const IntroWrapper = styled.div`

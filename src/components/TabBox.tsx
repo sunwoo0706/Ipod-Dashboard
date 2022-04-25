@@ -57,14 +57,12 @@ export function TabBox({ title, link, index }: TabBoxProps) {
   const [focusedIndex, setFocusedIndex] = useRecoilState(focusedIndexState);
 
   return (
-    <SmartLink link={link}>
-      <TabBoxWrapper
-        focused={focusedIndex === index}
-        onMouseOver={() => setFocusedIndex(index)}
-      >
-        <span>{title}</span>
-        <span>&gt;</span>
-      </TabBoxWrapper>
-    </SmartLink>
+    <TabBoxWrapper
+      focused={focusedIndex === index}
+      onMouseOver={() => setFocusedIndex(index)}
+    >
+      <span>{title}</span>
+      <span>&gt;</span>
+    </TabBoxWrapper>
   );
 }

@@ -2,11 +2,18 @@
   "name": "playlist",
   "version": "0.1.0",
   "private": true,
+  "eslintConfig": {
+    "extends": [
+      "plugin:cypress/recommended"
+    ]
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run"
   },
   "dependencies": {
     "@emotion/react": "^11.8.1",
@@ -20,9 +27,18 @@
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "cypress": "^9.5.4",
+    "cypress-react-selector": "^2.3.17",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "resq": "^1.10.2",
     "typescript": "4.5.5"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "dependenciesMeta": {
+    "resq@1.10.2": {
+      "unplugged": true
+    }
+  }
 }
