@@ -36,6 +36,7 @@ describe('iPod dashboard 페이지 테스트', () => {
 
   it('처음 페이지 접근시 Github에 포커싱이 잡힌다.', () => {
     // 외부링크 TabBox들은 a태그로 감싸져있기 때문에 children('div')로 접근한다.
+
     cy.react('TabBox', { props: { title: 'Github' } }).children('div').should('have.css', 'background-color', 'rgb(37, 42, 74)').and('have.css', 'color', 'rgb(171, 187, 210)');
   });
 
@@ -49,6 +50,14 @@ describe('iPod dashboard 페이지 테스트', () => {
   it('메뉴 버튼을 클릭하면 메인메뉴로 이동된다.', () => {
     cy.react('MenuBtn').click({force: true}).then(() => {
       cy.react('TabBox', { props: { title: 'Profile' } }).should('have.css', 'background-color', 'rgb(37, 42, 74)').and('have.css', 'color', 'rgb(171, 187, 210)');
+    });
+  })
+
+  it('외부링크 TabBox를 클릭하면 user-agent가 허용된 사이트는 접근된다.', () => {
+    cy.react('TabBox', { props: { title: 'Github' } }).invoke('attr', 'href').then(href => {
+      cy.origin((href), () => {
+        cy.visit('/')
+      })
     });
   })
 });
