@@ -1,17 +1,16 @@
 /// <reference types="cypress" />
 
-import path = require('path');
-import fs = require('fs');
+import * as path from 'path';
+import * as fs from 'fs';
 
-/**
- * @type {Cypress.PluginConfig}
- */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 module.exports = (on, config) => {
   on('task', {
     getResqFilePath() {
       const pathName = path.join(process.cwd(), '.yarn/unplugged');
       const files = fs.readdirSync(pathName);
-      const resqFiles = files.filter(f => f.includes('resq-npm-'));
+      const resqFiles = files.filter((f: string | string[]) => f.includes('resq-npm-'));
       if (resqFiles.length != 1) {
         throw new Error(
           `Cannot find the resq module in the unplugged ${pathName} - make sure the 'resq' package is unplugged`,
